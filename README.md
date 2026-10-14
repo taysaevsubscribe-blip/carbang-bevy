@@ -188,3 +188,15 @@ cargo run --release
 Код игры: MIT. Движок и библиотеки: MIT/Apache-2.0 и совместимые (полный список в `licenses/THIRD-PARTY.txt`). Шрифты: Russo One (SIL OFL 1.1), PT Sans (SIL OFL 1.1 / ParaType Free Font License). Текстуры ambientCG, HDRI Poly Haven, модели Kenney (включая машины), звуки Kenney: CC0. Текстуры v3, стадии износа и декали сделаны для игры в Ideogram (см. `licenses/CC0-assets.txt`).
 
 Звуки CC-BY 3.0 (атрибуция обязательна): тяжёлый мотор — mattvic79; мужские крики — jorgebaptista; женские крики — thanvannispen, tcrocker68 (OpenGameArt / Freesound). Подробно: `assets/sounds/CREDITS.txt`.
+
+## Сборка под Linux
+
+Бинарник собирается под glibc 2.28 (Ubuntu 20.04+, Debian 10+, Fedora 29+, Arch) через zig:
+
+```
+pip install ziglang cargo-zigbuild
+cargo-zigbuild rustc --release --target x86_64-unknown-linux-gnu.2.28 --bin carbang -- -C link-arg=-Wl,--allow-shlib-undefined
+tools/package_linux.sh
+```
+
+Флаг `--allow-shlib-undefined` нужен, потому что системные libasound/libudev сборочной машины новее glibc 2.28; на машине игрока берутся её собственные библиотеки. Для запуска нужны драйвер Vulkan, libasound2, libudev1 и X11 или Wayland.
