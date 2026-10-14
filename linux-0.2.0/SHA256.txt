@@ -1,0 +1,1 @@
+67da7d7229b9972a8d61895d71160fb228fd54c381b86394624cef0dceda6fc3  CarBang-0.2.0-linux-x86_64.tar.gz

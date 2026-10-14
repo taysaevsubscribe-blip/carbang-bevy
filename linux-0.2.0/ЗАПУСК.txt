@@ -1,0 +1,15 @@
+CarBang для Linux (x86_64)
+
+Запуск: ./carbang.sh   (или ./carbang из этой папки)
+
+Нужно:
+- glibc 2.28 или новее (Ubuntu 20.04+, Debian 10+, Fedora 29+, Arch, Mint 20+);
+- драйвер Vulkan: Mesa (Intel/AMD) или NVIDIA (пакеты mesa-vulkan-drivers / vulkan-radeon / nvidia);
+- ALSA или PipeWire/PulseAudio (libasound2) и libudev1, есть почти везде;
+- X11 или Wayland (libwayland-client0).
+
+Ubuntu/Debian, если игра не стартует:
+  sudo apt install libvulkan1 mesa-vulkan-drivers libudev1 libxkbcommon-x11-0 libwayland-client0
+  sudo apt install libasound2t64   (на Ubuntu 22.04 и старше: libasound2)
+
+Проверка без окна: ./carbang --headless --test physics
