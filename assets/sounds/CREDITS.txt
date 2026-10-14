@@ -1,0 +1,17 @@
+CarBang — звуки
+===============
+
+CC-BY 3.0 (атрибуция обязательна):
+  - engine_heavy_loop — mattvic79, OpenGameArt: https://opengameart.org/content/engine-loop-heavy-vehicletank
+  - pain_male_* (screams/male*.ogg — нарезка) — jorgebaptista, OpenGameArt: https://opengameart.org/content/11-male-human-paindeath-sounds
+  - female screams (screams/female*.ogg) — thanvannispen, tcrocker68 (Freesound); сборка congbongus, omeroivey, yomanc, OpenGameArt: https://opengameart.org/content/female-screams
+    Лицензия: https://creativecommons.org/licenses/by/3.0/
+
+CC0 (атрибуция не требуется):
+  - Kenney: Impact Sounds, Sci-fi Sounds, Voiceover Pack — https://kenney.nl
+  - engine_loop_0 / 1_0 / 2_0 — racing car engine sound loops, OpenGameArt
+
+Изменения: файлы перекодированы в OGG Vorbis моно, крики нарезаны на фрагменты по 0.9 с
+с нормализацией громкости (ffmpeg loudnorm). pain_male_5 из пакета не декодируется и не используется.
+
+Остальные звуки (шины, пулемёт, огнемёт, бонусы, интерфейс) синтезируются кодом игры.
