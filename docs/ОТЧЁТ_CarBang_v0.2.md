@@ -49,8 +49,10 @@
 
 ## Файлы
 
-- `CarBang-Setup-0.2.0.exe` (части `.partN`, если больше 30 МБ): установщик NSIS.
-- `CarBang-0.2.0-portable.zip` (части `.partN`): портативная версия.
-- `join.bat`: склейка частей, `SHA256.txt`: хеши.
-- `CarBang-0.2.0-src.tar.gz`: исходники и ассеты.
+- `CarBang-Setup-0.2.0.exe.part0..1`: установщик NSIS (47 МБ целиком).
+- `CarBang-0.2.0-portable.zip.part0..2`: портативная версия (64 МБ).
+- `CarBang-0.2.0-src.tar.gz.part0..1`: исходники и ассеты (44 МБ).
+- `join.bat`: склейка частей и хеши, `SHA256.txt`: эталонные SHA256.
+- GitHub: https://github.com/taysaevsubscribe-blip/carbang-bevy, ветка `main` (код, инструменты, ассеты, исходники текстур). Релиз с бинарниками создать отсюда нельзя: GitHub API отказал в правах на релизы.
+- Проверка: Windows-сборка прошла `--test physics` под wine.
 - Пересборка: `tools/build_windows.sh`, затем `tools/package.sh`. Машины: `tools/cars/convert.py`, `tools/cars/car_textures.py`.
