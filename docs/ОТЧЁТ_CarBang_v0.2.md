@@ -56,3 +56,4 @@
 - GitHub: https://github.com/taysaevsubscribe-blip/carbang-bevy, ветка `main` (код, инструменты, ассеты, исходники текстур). Релиз с бинарниками создать отсюда нельзя: GitHub API отказал в правах на релизы.
 - Проверка: Windows-сборка прошла `--test physics` под wine.
 - Пересборка: `tools/build_windows.sh`, затем `tools/package.sh`. Машины: `tools/cars/convert.py`, `tools/cars/car_textures.py`.
+- Linux: `CarBang-0.2.0-linux-x86_64.tar.gz.part0..2` (65 МБ), `join.sh` склеивает, проверяет SHA256 и распаковывает. Бинарник под glibc 2.28 (Ubuntu 20.04+, Debian 10+, Fedora 29+, Arch), собран через cargo-zigbuild. Проверено здесь: `--test physics` и кадр матча через Vulkan (lavapipe). На GitHub в ветке `builds`, папка `linux-0.2.0`.
